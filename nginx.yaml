@@ -1,0 +1,15 @@
+---
+- name: install Nginx on webservers
+  hosts: webserver1
+  become: yes
+
+  tasks:
+  - name: update apt cache
+    apt:
+      update_cache: yes
+
+  - name: install nginx
+    apt:
+      name: nginx
+      state: present
+...      
