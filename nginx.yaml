@@ -15,7 +15,7 @@
 
   - name: Deploy custom index.html
     copy:
-      source: index.html
+      src: index.html
       dest: /var/www/html/index.html
 
   - name: Ensure Nginx is running
