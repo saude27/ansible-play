@@ -15,18 +15,8 @@
 
   - name: Deploy custom index.html
     copy:
+      source: index.html
       dest: /var/www/html/index.html
-      content: |
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>Welcome to {{ inventory_hostname }}</title>
-        </head>
-        <body>
-            <h1>Hello from {{ inventory_hostname }} 🚀</h1>
-            <p>This server was configured with Ansible.</p>
-        </body>
-        </html>
 
   - name: Ensure Nginx is running
     service:
